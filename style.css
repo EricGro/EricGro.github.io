@@ -98,20 +98,29 @@ a:hover {
 
 header {
   background: #333;
-  height: 100px;
   overflow: hidden;
 }
   header nav {
     max-width: 840px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 1rem 20px;
   }
 
-  header nav .logo {
-    float: left;
-    margin: 14px 0;
+  header ul{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
   }
-    header nav .logo a {
+    header ul li{
+      list-style: none;
+      margin: auto 0 auto 3.4em;
+    }
+    .logo {
+      margin-right:auto;
+      margin-left: 0;
+    }
+    .logo a {
       float: left;
       width: 72px;
       height: 72px;
@@ -120,31 +129,16 @@ header {
       -moz-border-radius: 36px / 36px;
       border-radius: 36px / 36px;
     }
-    header nav .logo a:hover {
+    .logo a:hover {
       background-position: center -72px;
       background-color: rgba(255, 255, 255, 1);
     }
-
-  header ul{
-    float: right;
-    margin-top: 2rem;
-  }
-    header ul li{
-      list-style: none;
-      display: inline-block;
-      margin-left:3.4em;
-    }
-    header ul li:first-child{
-      list-style: none;
-      display: inline-block;
-      margin-left:3.4em;
-    }
-    header ul a {
+    header ul li+li a {
       font-weight: 500;
       color: #fff;
       padding: 0.5em 0;
     }
-    header ul a:hover {
+    header ul li+li a:hover {
       color: #8abfe6;
       border-bottom: 3px solid #8abfe6;
     }
@@ -228,17 +222,27 @@ figure { /*Bild*/
   figcaption {
     font-style: italic;
     text-align: left;
-    margin: 0.85em 0 0 0;
+    margin:0;
   }
     figcaption strong::after {
       font-weight: 300;
       content: " - ";
     }
 
+.grid {
+  width: 100%;
+  height:auto;
+  display: grid;
+  grid-column-gap: 40px;
+  grid-row-gap: 1.7rem;
+}
+.col3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 img {
   max-width: 100%;
   height: auto;
-  display: block;
   margin: 0;
 }
 
