@@ -318,34 +318,34 @@ html {
 
 
   
-    .navbutton {
-      display: none;
-      width: 72px;
-      height: 72px;
-      cursor: pointer;
-    }
-    .navbutton:hover .navicon{
-      fill: #8abfe6;
-    }
+.navbutton {
+  display: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+.navbutton:hover .navicon{
+  fill: #8abfe6;
+}
 
-  #navbar {
-    display: none;
+#navbar {
+  display: none;
+}
+  #navbar ul {
+    justify-content: center
   }
-    #navbar ul {
-      justify-content: center
+    #navbar ul li:first-child {
+      margin-left: 0;
     }
-      #navbar ul li:first-child {
-        margin-left: 0;
-      }
-      #navbar ul li a {
-        font-weight: 500;
-        color: #fff;
-        padding: 0;
-      }
-      #navbar ul li a:hover {
-        color: #8abfe6;
-        border: 0;
-      }
+    #navbar ul li a {
+      font-weight: 500;
+      color: #fff;
+      padding: 0;
+    }
+    #navbar ul li a:hover {
+      color: #8abfe6;
+      border: 0;
+    }
 
 
 @media (max-width: 700px){
