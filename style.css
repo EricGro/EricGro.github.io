@@ -1,27 +1,290 @@
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Fira Sans Light'), local('FiraSans-Light'), url(https://fonts.gstatic.com/s/firasans/v8/VTBnrK42EiOBncVyQXZ7j-gdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Fira Sans Light Italic'), local('FiraSans-LightItalic'), url(https://fonts.gstatic.com/s/firasans/v8/6s0YCA9oCTF6hM60YM-qTUo2lTMeWA_kmIyWrkNCwPc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Fira Sans Medium'), local('FiraSans-Medium'), url(https://fonts.gstatic.com/s/firasans/v8/zM2u8V3CuPVwAAXFQcDi4Ogdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Fira Sans Medium Italic'), local('FiraSans-MediumItalic'), url(https://fonts.gstatic.com/s/firasans/v8/6s0YCA9oCTF6hM60YM-qTbBojE9J5UnpMtv5N3zfxwk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+html {
+  font-size: 21px;
+}
+
 * {
-  margin: 0;
-  border: 0;
-  padding: 0;
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  box-sizing: border-box;
+  vertical-align: baseline;
 }
 
 body {
-  font-family: "Fira Sans", Arial, sans-serif;
-  font-size: 100%;
+  background: #FFF;
+  /*background:url("images/layout_grid.png") repeat center 0px;*/
+  font-family: 'Fira Sans', Arial, sans-serif;
+  font-weight: 300;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.7em;
 }
 
-#box {
+@media (max-width: 569px){
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px){
+  body {
+    font-size: 14px;
+  }
+}
+
+* {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  font-size: 100%
+}
+
+a {
+  webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.15s;
+  -moz-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+a {
+  color: #808080;
+  text-decoration: none;
+}
+a:hover {
+  color: #8abfe6;
+  text-decoration: none;
+}
+
+/* ----- HEADER ----- */
+
+header {
+  background: #333;
+  height: 100px;
+  overflow: hidden;
+}
+  header nav {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  header nav .logo {
+    float: left;
+    margin: 14px 0;
+  }
+    header nav .logo a {
+      float: left;
+      width: 72px;
+      height: 72px;
+      background: rgba(255, 255, 255, 0) url("images/avatar.png") no-repeat center 0px;
+      -webkit-border-radius: 36px 36px;
+      -moz-border-radius: 36px / 36px;
+      border-radius: 36px / 36px;
+    }
+    header nav .logo a:hover {
+      background-position: center -72px;
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+  header ul{
+    float: right;
+    margin-top: 2rem;
+  }
+    header ul li{
+      list-style: none;
+      display: inline-block;
+      margin-left:3.4em;
+    }
+    header ul li:first-child{
+      list-style: none;
+      display: inline-block;
+      margin-left:3.4em;
+    }
+    header ul a {
+      font-weight: 500;
+      color: #fff;
+      padding: 0.5em 0;
+    }
+    header ul a:hover {
+      color: #8abfe6;
+      border-bottom: 3px solid #8abfe6;
+    }
+
+
+/* ----- HAUPTBEREICH ----- */
+
+main {
+  max-width: 840px;
   margin: 3.4em auto 0 auto;
+  padding: 0 20px;
 }
 
-h1 {
-  font-size: 3em;
+h1 { /*Haupttitel*/
   font-weight: 500;
   text-align: center;
+  margin: 1.7rem 0;
 }
 
-p {
-  font-size: 2em;
-  font-style: italic;
+h2 { /*Untertitel*/
   font-weight: 300;
+  font-style: italic;
   text-align: center;
+  margin: -1.7rem 0 1.7rem 0;
 }
+
+h3 { /*Absatztitel*/
+  font-weight: 500;
+  text-align: center;
+  margin: 1.7rem 0;
+}
+
+h4 { /*Abschnitt*/
+  font-weight: 500;
+  text-align: left;
+  margin: 1.7rem 0;
+}
+
+p { /*Hauptüberschrift*/
+  margin: 0 0 1.7rem 0;
+}
+p+p {
+  text-indent: 1.7rem;
+  margin-top: -1.7rem;
+}
+.introduction {
+  font-weight: 500;
+}
+.introduction+p {
+  text-indent: 0em;
+  margin: 0 0 1.7em 0;
+}
+
+strong , b {
+  font-weight: 500;
+}
+em, i {
+  font-style: italic;
+}
+
+a {
+
+}
+
+blockquote { /*Blockzitat*/
+  font-style: italic;
+  margin: 1.7em 0 1.7em 1.7em;
+}
+  blockquote::before {
+    content:open-quote;
+  }
+  blockquote::after {
+    content:close-quote;
+  }
+
+figure { /*Bild*/
+  text-align: center;
+  display: block;
+  margin: 0 0 1.7em 0;
+}
+  figcaption {
+    font-style: italic;
+    text-align: left;
+    margin: 0.85em 0 0 0;
+  }
+    figcaption strong::after {
+      font-weight: 300;
+      content: " - ";
+    }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+ul {
+  list-style-type: disc;
+  display: block;
+  margin: 0 0 1.7em 1.7em;
+}
+ol {
+  list-style-type: decimal;
+  display: block;
+  margin: 0 0 1.7em 1.7em;
+}
+
+hr {
+  width: 100%;
+  height: 10px;
+  border: none;
+  background: url("images/stripe-pattern.png") repeat center 0px;
+  display: block;
+  margin: 0 0 1.7em 0;
+}
+
+/* ----- FOOTER ----- */
+
+footer {
+  max-width: 840px;
+  margin: 3.4em auto 0 auto;
+  padding: 0 20px;
+}
+  footer ul {
+    list-style: none;
+    margin: -1.7rem 0 1.7rem 0;
+    display: block;
+    text-align: center;
+  }
+    footer ul li {
+      list-style: none;
+      display: inline-block;
+    }
+    footer ul li+li::before {
+      content: ' · ';
+      font-weight: 500;
+      margin: 0 0.85rem;
+
+    }
+  footer a {
+    color: #333;
+  }
