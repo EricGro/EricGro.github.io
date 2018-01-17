@@ -2,8 +2,7 @@ const navbutton = document.getElementById("navbutton");
 const navbar = document.getElementById("navbar");
 
 navbutton.addEventListener("click", () => {
-  if(navbar.style.display === "none") navbar.style.display = "block";
-  else navbar.style.display = "none";
+  alert.(navbar.style.display);
 });
 
 window.addEventListener("resize", () => {
