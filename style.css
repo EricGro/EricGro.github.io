@@ -242,16 +242,22 @@ figure { /*Bild*/
   grid-column-gap: 40px;
   grid-row-gap: 1.7rem;
 }
+.grid figure {
+  margin: 0;
+}
+.grid-container {
+  margin: 0 0 1.7em 0;
+}
 .col3 {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .datagrid {
   grid-template-columns: 1fr 2fr;
-  grid-row-gap: 0;
+  grid-row-gap: 1.7rem;
 }
   .datagrid p {
-    margin-bottom: 0.85rem;
+    margin: 0;
   }
   .datagrid div:nth-child(odd) p {
     font-weight: 500;
@@ -280,7 +286,7 @@ hr {
   border: none;
   background: url("images/stripe-pattern.png") repeat center 0px;
   display: block;
-  margin: 0 0 1.7em 0;
+  margin: 1.7rem 0 1.7rem 0;
 }
 
 /* ----- FOOTER ----- */
@@ -370,7 +376,15 @@ html {
   }
   .datagrid {
     grid-template-columns: 1fr;
+    grid-row-gap: 0rem;
   }
+  .datagrid div:nth-child(even) p {
+    margin-bottom: 0.85rem;
+  }
+  .datagrid div:last-child p {
+    margin-bottom: 0;
+  }
+
 
   header nav ul .navlink {
     display: none;
