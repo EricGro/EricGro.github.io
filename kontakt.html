@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Online Portfolio von Eric Grochowski">
+    <meta name="author" content="Eric Grochowski">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="icon" type="image/png" href="images/favicon-152.png" />
+    <link rel="mask-icon" href="website_icon.svg" color="#333333">
+
+    <link rel="preload" href="style.css" as="style">
+    <!-- <link rel="preload" href="https://code.jquery.com/jquery-3.2.1.min.js" as="script"> -->
+    <link rel="preload" href="main.js" as="script">
+
+    <title>Eric Grochowski &ndash; Interfacedesign</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+
+    <nav>
+      <div class="container">
+        <ul>
+          <li class="logo"><a href="index.html" titel="Startseite"></a></li>
+          <!-- <li class="navlink"><a href="index.html" titel="Startseite">Start</a></li> -->
+          <li class="navlink"><a href="projekte.html" titel="Projekte">Projekte</a></li>
+          <li class="navlink"><a href="vita.html" titel="Vita">Vita</a></li>
+          <li class="navlink"><a href="kontakt.html" titel="Kontakt">Kontakt</a></li>
+          <li class="navbutton" id="navbutton">
+            <svg width="36px" height="36px" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+              <g fill="#fff" fill-rule="evenodd">
+                <rect class="navicon" x="10" y="20" width="52" height="10"/>
+                <rect class="navicon" x="10" y="42" width="52" height="10"/>
+              </g>
+            </svg>
+          </li>
+        </ul>
+      </div>
+      <div class="container" id="navbar">
+        <ul>
+          <li><a href="projekte.html" titel="Projekte">Projekte</a></li>
+          <li><a href="vita.html" titel="Vita">Vita</a></li>
+          <li><a href="kontakt.html" titel="Kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HAUPTBEREICH -->
+
+    <main>
+      <section>
+
+        <h1>Kontakt</h1>
+
+        <p>Cupcake ipsum dolor sit. Amet pie sesame snaps. Halvah fruitcake pudding jelly-o marzipan cake fruitcake cookie. Dessert sweet roll I love oat cake toffee chocolate cotton candy. Lollipop tiramisu oat cake chocolate. Croissant I love marzipan chocolate topping cupcake lollipop chocolate bar. Donut chocolate bar apple pie lollipop marzipan ice cream tootsie roll chupa chups candy canes.</p>
+
+        <form>
+          <div class="grid col2">
+            <div>
+              <input name="name" id="name" type="text" placeholder="Name" value="" required/>
+            </div>
+            <div>
+              <input name="email" id="email" type="email" placeholder="Email" value="" required>
+            </div>
+          </div>
+          <div>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Moin Moin!" required></textarea>
+          </div>
+          <button>Senden</button>
+        </form>
+
+        <hr />
+
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <ul>
+        <li><a href="http://twitter.com/ericgrochowski" target="_blank" title="Twitter">Twitter</a></li>
+        <li><a href="http://instagram.com/eric_gro" target="_blank" title="Instagram">Instagram</a></li>
+        <li><a href="https://fhp.incom.org/profile/2657/projects" target="_blank" title="Incom">Incom</a></li>
+      </ul>
+      <ul>
+        <li>Eric Grochowski</li>
+        <li>Impressum</li>
+      </ul>
+    </footer>
+
+
+    <!-- MODAL -->
+    <div class="modal">
+        <span class="modal-button" id="close">&times;</span>
+      <div class="modal-container">
+        <div style="position: relative"><img src="images/abstract-q-c-1280-720-3.jpg" class="modal-image" id="mImg">
+          <span class="modal-button" id="prev">&#10094;</span>
+          <span class="modal-button" id="next">&#10095;</span>
+        </div>
+        <div class="modal-caption"></div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+      
+    </script>
+
+    <!-- JavaScript -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+    <script type="text/javascript"  src="main.js"></script>
+  </body>
+</html>
