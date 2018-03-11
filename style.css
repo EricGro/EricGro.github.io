@@ -194,7 +194,8 @@ header {
   margin: 1.7rem auto;
   display:block;
   border-radius: 50%;
-  max-height: 250px;
+  max-width: 250px;
+  height: auto;
   border: 10px solid rgba(0,0,0,0.1);
 }
 
