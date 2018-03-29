@@ -269,6 +269,9 @@ p+.abs {
   text-indent: 0em;
   margin: 0 0 1.7em 0;
 }
+p.subtle {
+  color: #999;
+}
 
 strong , b {
   font-weight: 500;
@@ -337,6 +340,9 @@ figure { /*Bild*/
 .col2, .col2t1 {
   grid-template-columns: 1fr 1fr;
 }
+.col2-31 {
+  grid-template-columns: 3fr 1fr;
+}
 .col3 {
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -392,6 +398,51 @@ hr {
   background: url("images/stripe-pattern.png") repeat center 0px;
   display: block;
   margin: 1.7rem 0 1.7rem 0;
+}
+
+
+form {
+  width: 100%;
+  display: block;
+  margin: 0 0 1.7rem 0;
+}
+input, textarea {
+  width: 100%;
+  border: 1px solid #333;
+  margin: 0 0 1.7rem 0;
+  padding:  0.425rem 0.6rem;
+  font: inherit;
+  resize: vertical;
+  color: #333;
+}
+textarea {
+  height: 200px;
+}
+input:-moz-ui-invalid, textarea:-moz-ui-invalid {
+  border: 1px solid #e74c3c;
+  box-shadow: none;
+}
+input:focus, textarea:focus {
+  border: 1px solid #8abfe6;
+  box-shadow: none;
+}
+button {
+  border: 1px solid #333;
+  background-color: #fff;
+  width:50%;
+  padding: 0.425rem;
+  font: inherit;
+  font-weight: 300;
+  color: #333;
+  cursor: pointer;
+}
+button:hover, button:focus {
+  border: 1px solid #8abfe6;
+  background-color: #8abfe6;
+  color: #fff
+}
+.form-button {
+  text-align: center;
 }
 
 /* ----- FOOTER ----- */
@@ -546,7 +597,7 @@ html {
   .grid {
     grid-gap: 10px;
   }
-  .col2t1 {
+  .col2t1, .col2-31 {
     grid-template-columns: 1fr;
   }
   .datagrid, .projekte, .vita {
