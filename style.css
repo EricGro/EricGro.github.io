@@ -324,13 +324,17 @@ figure { /*Bild*/
   grid-column-gap: 40px;
   grid-row-gap: 1.7rem;
 }
+.grid p {
+  margin: 0;
+}
+
 .grid figure {
   margin: 0;
 }
 .grid-container {
   margin: 0 0 1.7rem 0;
 }
-.col2 {
+.col2, .col2t1 {
   grid-template-columns: 1fr 1fr;
 }
 .col3 {
@@ -541,6 +545,9 @@ html {
   }
   .grid {
     grid-gap: 10px;
+  }
+  .col2t1 {
+    grid-template-columns: 1fr;
   }
   .datagrid, .projekte, .vita {
     grid-template-columns: 1fr;
