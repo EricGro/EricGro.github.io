@@ -327,9 +327,6 @@ figure { /*Bild*/
   grid-column-gap: 40px;
   grid-row-gap: 1.7rem;
 }
-.grid p {
-  margin: 0;
-}
 
 .grid figure {
   margin: 0;
@@ -596,6 +593,9 @@ html {
   }
   .grid {
     grid-gap: 10px;
+  }
+  .nm p{
+    margin: 0;
   }
   .col2t1, .col2-31 {
     grid-template-columns: 1fr;
