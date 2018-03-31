@@ -296,15 +296,10 @@ figure { /*Bild*/
   display: block;
   margin: 0 0 1.7rem 0;
 }
-  figcaption, .modal-caption {
+  figcaption, .caption, .modal-caption {
     font-style: italic;
     text-align: left;
     margin: 0;
-  }
-  .caption {
-    font-style: italic;
-    text-align: left;
-    margin: 0 0 1.7rem 0;
   }
   .embedded+.caption {
     margin: -1.1rem 0 1.7rem 0;
@@ -348,7 +343,7 @@ figure { /*Bild*/
 .col2-31 {
   grid-template-columns: 3fr 1fr;
 }
-.col3 {
+.col3, .col3t1, .col3t2 {
   grid-template-columns: 1fr 1fr 1fr;
 }
 .vita {
@@ -609,8 +604,11 @@ html {
   .grid {
     grid-column-gap: 10px;
   }
-  .col2t1, .col2-31 {
+  .col2t1, .col3t1, .col2-31 {
     grid-template-columns: 1fr;
+  }
+  .col3t2 {
+    grid-template-columns: 1fr 1fr;
   }
   .datagrid, .projekte, .vita {
     grid-template-columns: 1fr;
